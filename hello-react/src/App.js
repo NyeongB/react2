@@ -1,21 +1,28 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import "./MyComponent.js";
+import MyComponent from "./MyComponent.js";
+import Counter from "./Counter";
+import Say from "./Say";
 
-function App(){
-  const name = '리액트';
+function App() {
+  const name = "리액트";
   const style = {
-    backgroundColor: 'black',
-    color: 'aqua',
-    fontSize: '48px',
-    fontWeight: 'bold',
-    padding: 16
-  }
+    backgroundColor: "black",
+    color: "aqua",
+    fontSize: "48px",
+    fontWeight: "bold",
+    padding: 16,
+  };
   return (
-    <div>
-      <div style={style}>{name}</div>
-      <div className='react'>{name}</div>
-    </div>
-  )
+    <>
+      <div className="react">{name}</div>
+      <input></input>
+      <MyComponent>칠드런 리액트</MyComponent>
+      <Counter />
+      <Say></Say>
+    </>
+  );
   //return <div style={style}>{name}</div>
 }
 export default App;
