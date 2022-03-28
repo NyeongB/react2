@@ -4,6 +4,7 @@ import "./MyComponent.js";
 import MyComponent from "./MyComponent.js";
 import Counter from "./Counter";
 import Say from "./Say";
+import EventPractice from "./EventPractice";
 
 function App() {
   const name = "리액트";
@@ -21,6 +22,7 @@ function App() {
       <MyComponent>칠드런 리액트</MyComponent>
       <Counter />
       <Say></Say>
+      <EventPractice></EventPractice>
     </>
   );
   //return <div style={style}>{name}</div>
