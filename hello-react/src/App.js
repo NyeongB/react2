@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 import ValidationSample from "./ValidationSample";
+import IterationSample from "./IterationSample";
 
 export default class App extends Component {
   render() {
-    return <ValidationSample></ValidationSample>;
+    return (
+      <>
+        <ValidationSample></ValidationSample>
+        <IterationSample></IterationSample>
+      </>
+    );
   }
 }
 
