@@ -1,13 +1,29 @@
 import React, { Component } from "react";
 import ValidationSample from "./ValidationSample";
 import IterationSample from "./IterationSample";
+import LifeCycleSample from "./LifeCycleSample";
 
 export default class App extends Component {
+  state = {
+    color: "#000000",
+  };
+
+  getRandomColor = () =>
+    "#" + Math.floor(Math.random() * 16777215).toString(16);
+
+  handleClick = () => {
+    this.setState({
+      color: this.getRandomColor(),
+    });
+  };
+
   render() {
     return (
       <>
         <ValidationSample></ValidationSample>
         <IterationSample></IterationSample>
+        <button onClick={this.handleClick}>랜덤 색상</button>
+        <LifeCycleSample color={this.state.color}></LifeCycleSample>
       </>
     );
   }
