@@ -17,3 +17,12 @@ hooks-tutorial/src/Info.js
 hooks-tutorial/src/logo.svg
 hooks-tutorial/src/reportWebVitals.js
 hooks-tutorial/src/setupTests.js
+todo-app/package.json
+todo-app/package-lock.json
+todo-app/README.md
+todo-app/public/favicon.ico
+todo-app/public/logo192.png
+todo-app/public/logo512.png
+todo-app/public/robots.txt
+todo-app/src/reportWebVitals.js
+todo-app/src/setupTests.js
