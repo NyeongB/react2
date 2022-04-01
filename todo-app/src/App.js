@@ -4,6 +4,22 @@ import TodoList from './components/TodoList';
 import TodoTemplate from './components/TodoTemplate';
 
 const App = () => {
+  // 많은 데이터
+  const createBulkTodos = () => {
+    const array = [];
+    for (let i = 1; i <= 2500; i++) {
+      array.push({
+        id: i,
+        text: `할 일 .${i}`,
+        checked: false,
+      });
+    }
+    return array;
+  };
+  //const [todos, setTodos] = useState(createBulkTodos());
+  const [todos, setTodos] = useState(createBulkTodos); // 파라미터를 항수 형태로 넣어주면 컴포넌트가 처음 렌더링될때만 실행
+
+  /*
   const [todos, setTodos] = useState([
     {
       id: 1,
@@ -21,6 +37,7 @@ const App = () => {
       checked: false,
     },
   ]);
+  */
 
   const nextId = useRef(4);
 
