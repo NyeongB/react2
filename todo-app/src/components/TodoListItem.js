@@ -7,10 +7,11 @@ import {
 import cn from 'classnames';
 import './TodoListItem.scss';
 
-const TodoListItem = ({ todo, onRemove, onToggle }) => {
+const TodoListItem = ({ todo, onRemove, onToggle, style }) => {
   const { id, text, checked } = todo;
+
   return (
-    <>
+    <div className="TodoListItem-virtualized" style={style}>
       <div className="TodoListItem">
         <div
           className={cn('checkbox', { checked })}
@@ -23,8 +24,8 @@ const TodoListItem = ({ todo, onRemove, onToggle }) => {
           <MdRemoveCircleOutline />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default React.memo(TodoListItem); // 컴포넌트의 props가 바뀌지 않았다면 리렌더링하지않도록 설정 ->  React.memo
+export default React.memo(TodoListItem);
